@@ -3,7 +3,7 @@ body{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 3% 25% 10% 0.6fr 0.8fr 10% 25% 3%;
+    grid-template-columns: 3% 25% 10% 3vw 5vw 10% 25% 3%;
     grid-template-rows: 5% 5% 1fr 1fr 15% 15% 15% 1fr 0.2fr 1fr 1fr 5%;
 }
 .players-background{
@@ -46,7 +46,9 @@ div.player{
     flex-direction: column;
     align-items: center;
 }
-
+.player-header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .current-score-1{
     grid-column-start: 2;
     grid-column-end: 2;
@@ -74,23 +76,22 @@ div.player{
 
 /* Buttons */
 .new-game{
+    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 3;
-    margin-left: 3rem;   
-
 }
 img#new-game{
     width: 20px;
     height: 20px;
 }
 .dice{
+    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 8;
     grid-row-end: 8;
-    margin-left: 3rem;   
 
 }
 img#dice{
@@ -100,16 +101,17 @@ img#dice{
 }
 
 .hold{
+    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 10;
     grid-row-end: 10;
-    margin-left: 6rem;   
+    margin-left: 2rem;
 }
 img#hold{
     width: 16px;
     height: 16px;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
 }
 .fit{
     font-size: 2rem;
@@ -121,19 +123,18 @@ img#hold{
 }
 
 .roller-dice-1{
+    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 6;
-    margin-left: 4rem;
 }
 .roller-dice-2{
+    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 6;
     grid-row-end: 8;
-    margin-left: 4rem;
-
 }
 
 
@@ -145,3 +146,4 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     width: 100px;
     height: 100px;
 }
+
