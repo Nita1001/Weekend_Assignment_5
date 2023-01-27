@@ -14,7 +14,8 @@ const firstDice = document.querySelector('.roller-dice-1 div img');
 const secondDice = document.querySelector('.roller-dice-2 div img');
 
 let CurrentSum = 0; // sum is for current Player
-let score = 0; // score throughout the round
+let score = 0; // score throughout the rounds
+let turns = 1; // first Players / second players turn
 
 roll.addEventListener('click', () => {
     let curr = Math.floor(Math.random()* 5) + 1;
@@ -26,19 +27,30 @@ roll.addEventListener('click', () => {
     //who is playing?
     // assuming for now 1st player turn
     CurrentSum += result;
-    p1CurrScore.innerText = CurrentSum;
+    if(turns === 1){
+        p1CurrScore.innerText = CurrentSum;
+    } else {
+        p2CurrScore.innerText = CurrentSum;
+    }
     console.log('current score',p1CurrScore.innerText);
+    result = 0;
 });
 
 hold.addEventListener('click', () => {
     // assuming for now 1st player turn    
     score += CurrentSum;
-    player1Score.innerText = score; 
-    CurrentSum = 0;
-
+    if(turns === 1){
+        player1Score.innerText = score;
+        turns = 2;
+    } else {
+        player2Score.innerText = score;
+        turns = 1;
+    }
+        CurrentSum = 0;
 });
 
 newGame.addEventListener('click', () =>{
     alert('NEW GAME');
+
 });
 
