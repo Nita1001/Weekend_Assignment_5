@@ -15,9 +15,8 @@ const secondDice = document.querySelector('.roller-dice-2 div img');
 
 
 roll.addEventListener('click', () => {
-    alert('Roll Dice');
-    firstDice.setAttribute('src', myDice[Math.floor()]);
-    secondDice.setAttribute('src', myDice[2]);
+    firstDice.setAttribute('src', myDice[Math.floor(Math.random()* 5) + 1]);
+    secondDice.setAttribute('src', myDice[Math.floor(Math.random()* 5) + 1]);
 });
 
 hold.addEventListener('click', () => {
