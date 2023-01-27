@@ -9,18 +9,19 @@ section{
     min-width: 40vw;
     min-height: 80vh;
     z-index: -1;
+    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
 }
 .section-left{
     background-color: #f5487f;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 5;
 }
 .section-right{
     background-color: #c7417b;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 5;
 }
@@ -31,8 +32,8 @@ div.player{
     align-items: center;
     justify-content: center;
     border: solid black;
-    width: 20rem;
-    height: 10rem;
+    width: 10rem;
+    height: 12rem;
     top: 3rem;
     left: 4rem;
     position: absolute;
