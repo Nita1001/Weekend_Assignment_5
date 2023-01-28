@@ -21,6 +21,10 @@ const diceSound = document.querySelector('#rolling-dice-sound');
 const holdSound = document.querySelector('#hold-sound');
 const winningSound = document.querySelector('#winning-Sound');
 const funnyMeme = document.querySelector('#meme')
+const musicBtn = document.querySelector('#bckg-music');
+const backgroundP1 = document.querySelector('#left-bckg');
+const backgroundP2 = document.querySelector('#right-bckg')
+
 diceSound.volume = 0.03;
 holdSound.volume = 0.06;
 winningSound.volume = 0.03;
@@ -35,7 +39,7 @@ let turns = 1; // first Players or second players turn
 let targetScore = 0;
 targetScoreInput.value = '100'; // default value
 //Background music
-window.addEventListener('DOMContentLoaded', event =>{
+musicBtn.addEventListener('click', () =>{
     const backgroundMusic = document.querySelector('#background-music');
     backgroundMusic.volume = 0.03;
     backgroundMusic.play();
@@ -59,6 +63,7 @@ startGame.addEventListener('click', () =>{
     targetScore = targetScoreInput.value;
     startGameSection.setAttribute('class', 'hidden');
 });
+
 roll.addEventListener('click', () => {
     diceSound.play();
     let curr = Math.floor(Math.random()* 5) + 1;
@@ -97,10 +102,14 @@ hold.addEventListener('click', () => {
         scoreP1 += currentSum;
         player1Score.innerText = scoreP1;
         turns = 2;
+        backgroundP2.classList.remove('background-opacity');
+        backgroundP1.classList.add('class', 'background-opacity');
     } else {
         scoreP2 += currentSum;
         player2Score.innerText = scoreP2;
         turns = 1;
+        backgroundP1.classList.remove('background-opacity');
+        backgroundP2.classList.add('class', 'background-opacity');
     }
     if(scoreP1 === targetScore || scoreP2 === targetScore){
         winningSound.play();

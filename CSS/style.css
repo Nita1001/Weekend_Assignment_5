@@ -185,10 +185,17 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     width: 50%;
 }
 
+.bckg-music-btn{
+    position: absolute;
+    left: 8%;
+    top: 62%;
+    border: none;
+    background: none;
+}
 
 /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
 .background-opacity{
-        background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5));
+    opacity: 0.3;
 }
 
 
@@ -208,7 +215,7 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
         grid-row-end: 14;
     }
     .background-right{
-        background-color: #c7417b;
+        background-color: #f5487f;
         grid-column-start: 5;
         grid-column-end: 8;
         grid-row-start: 2;
@@ -370,9 +377,5 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     }
     
     /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
-    .background-opacity{
-            /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
-    }
-    
-    
+
 }
