@@ -1,5 +1,4 @@
 'use strict'
-
 const player1Score = document.querySelector('#points-1');
 const player2Score = document.querySelector('#points-2');
 const p1CurrScore = document.querySelector('#curr-points-1');
@@ -27,7 +26,7 @@ const backgroundP2 = document.querySelector('#right-bckg')
 diceSound.volume = 0.03;
 holdSound.volume = 0.06;
 winningSound.volume = 0.03;
-let currentSum = 0; // sum is for current Player round points
+let currentSum = 0; // sum is for current Player round points.
 // score throughout the rounds -Hold- global score
 let scoreP1 = 0; 
 let scoreP2 = 0;
@@ -83,7 +82,8 @@ roll.addEventListener('click', () => {
             }
             roll.removeAttribute('disabled', '');
             hold.removeAttribute('disabled', '');
-            funnyMeme.setAttribute('class', 'hidden')
+            funnyMeme.setAttribute('class', 'hidden');
+            currentSum = 0;
           }, 3500); // 1sec was too short so i added 2 more sec.
     } else {
         let result = curr + curr2 + 2;
@@ -124,8 +124,7 @@ hold.addEventListener('click', () => {
             p2CurrHeader.innerText ='You Won!';
             winsP2++;
             p2TotalWins.innerText = winsP2;
-
-        } 
+        }
         resetGame();
     } else if(scoreP1 > targetScore || scoreP2 > targetScore)
     {
