@@ -3,8 +3,8 @@ body{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 3% 25% 10% 3vw 5vw 10% 25% 3%;
-    grid-template-rows: 5% 5% 1fr 1fr 15% 15% 15% 1fr 0.2fr 1fr 1fr 5%;
+    grid-template-columns: 8% 25% 10% 5% 5% 10% 25% 8%;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
 }
 .players-background{
     min-width: 40vw;
@@ -12,7 +12,6 @@ body{
     z-index: -1;
 }
 .background-left{
-    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
     background-color: #f5487f;
     grid-column-start: 2;
     grid-column-end: 5;
@@ -20,7 +19,6 @@ body{
     grid-row-end: 12;
 }
 .background-right{
-    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
     background-color: #c7417b;
     grid-column-start: 5;
     grid-column-end: 8;
@@ -112,7 +110,6 @@ section.target{
 }
 /* New Game */
 .new-game-section{
-    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 3;
@@ -125,7 +122,6 @@ img#new-game{
 
 /* Dice */
 .dice-section{
-    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 8;
@@ -139,12 +135,10 @@ img#dice{
 
 /* Hold */
 .hold-section{
-    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 10;
     grid-row-end: 10;
-    margin-left: 2rem;
 }
 img#hold{
     width: 16px;
@@ -155,22 +149,26 @@ img#hold{
 /* for buttons */
 .fit{
     font-size: 2rem;
-    width: fit-content;
-    height: fit-content;
+    width: 16rem;
+    height: 4rem;
     background-color: rgba(245, 245, 245, 0.9);
     border-radius: 1rem;
     border: none;
 }
+
+.display-flex-center{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Roller Dice pictures */
 .roller-dice-1{
-    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 6;
 }
 .roller-dice-2{
-    display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 6;
@@ -181,11 +179,17 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     height: 100px;
 }
 .double-message{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 8;
+    position: absolute;
+    left: 55rem;
+    top: 20rem;
 }
 .funny-meme{
     /*  */
+}
+
+
+
+/* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
+.background-opacity{
+        /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
 }
