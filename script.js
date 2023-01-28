@@ -18,8 +18,9 @@ const secondDice = document.querySelector('.roller-dice-2 div img');
 const diceSound = document.querySelector('#rolling-dice-sound');
 const holdSound = document.querySelector('#hold-sound');
 const winningSound = document.querySelector('#winning-Sound');
+const funnyMeme = document.querySelector('#meme')
 diceSound.volume = 0.03;
-holdSound.volume = 0.04;
+holdSound.volume = 0.06;
 winningSound.volume = 0.03;
 let currentSum = 0; // sum is for current Player round points
 // score throughout the rounds -Hold- global score
@@ -46,7 +47,8 @@ roll.addEventListener('click', () => {
     firstDice.setAttribute('src', myDice[curr]);
     secondDice.setAttribute('src', myDice[curr2]);
     if(curr === 5 && curr2 === 5){
-        alert('double 6 !!!'); /// change to some other message
+        funnyMeme.setAttribute('class', 'double-message')
+
         setTimeout(() => {
             if(turns === 1){
                 p1CurrScore.innerText = 0;
@@ -55,7 +57,8 @@ roll.addEventListener('click', () => {
                 p2CurrScore.innerText = 0;
                 turns = 1;
             }
-          }, 1000);
+            funnyMeme.setAttribute('class', 'hidden')
+          }, 3000); // 1sec was too short so i added 2 more sec.
     } else {
         let result = curr + curr2 + 2;
         // add result to current score each time

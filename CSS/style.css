@@ -180,4 +180,12 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     width: 100px;
     height: 100px;
 }
-
+.double-message{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.funny-meme{
+    
+}
