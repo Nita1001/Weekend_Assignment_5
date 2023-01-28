@@ -180,12 +180,12 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
 }
 .double-message{
     position: absolute;
-    left: 55rem;
-    top: 20rem;
+    left: 3rem;
+    top: 4rem;
 }
 .funny-meme{
-    width: fit-content;
-    height: fit-content;
+    width: 50%;
+    height: 50%;
 }
 
 /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
