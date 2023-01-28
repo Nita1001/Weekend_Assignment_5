@@ -24,7 +24,6 @@ const funnyMeme = document.querySelector('#meme')
 const musicBtn = document.querySelector('#bckg-music');
 const backgroundP1 = document.querySelector('#left-bckg');
 const backgroundP2 = document.querySelector('#right-bckg')
-
 diceSound.volume = 0.03;
 holdSound.volume = 0.06;
 winningSound.volume = 0.03;
@@ -71,6 +70,8 @@ roll.addEventListener('click', () => {
     firstDice.setAttribute('src', myDice[curr]);
     secondDice.setAttribute('src', myDice[curr2]);
     if(curr === 5 && curr2 === 5){
+        roll.setAttribute('disabled', '');
+        hold.setAttribute('disabled', '');
         funnyMeme.setAttribute('class', 'double-message')
         setTimeout(() => {
             if(turns === 1){
@@ -80,8 +81,10 @@ roll.addEventListener('click', () => {
                 p2CurrScore.innerText = 0;
                 turns = 1;
             }
+            roll.removeAttribute('disabled', '');
+            hold.removeAttribute('disabled', '');
             funnyMeme.setAttribute('class', 'hidden')
-          }, 4000); // 1sec was too short so i added 2 more sec.
+          }, 3500); // 1sec was too short so i added 2 more sec.
     } else {
         let result = curr + curr2 + 2;
         // add result to current score each time
