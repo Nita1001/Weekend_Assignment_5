@@ -76,7 +76,7 @@ div.player{
     grid-column-start: 1;
     grid-column-end: 9;
     grid-row-start: 1;
-    grid-row-end: 13;
+    grid-row-end: 14;
     background-color: aqua;
     z-index: 8;
 }
@@ -254,20 +254,15 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     
     /*  Start Game */
     .start-game-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         border-radius: 6rem;
-        grid-column-start: 1;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 13;
-        background-color: aqua;
+        width: 80vw;
+        height: 80vh;
+        background-color: #748bd8;
         z-index: 8;
     }
     .game-instructions{
-        height: 20rem;
+        font-size: 2rem;
+        height: 12rem;
     }
     section.target{
         display: flex;
@@ -333,13 +328,13 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     /* for buttons */
     .fit{
         font-size: 2rem;
-        width: 16rem;
+        width: 18rem;
         height: 4rem;
         background-color: rgba(245, 245, 245, 0.9);
         border-radius: 1rem;
         border: none;
     }
-    
+
     .display-flex-center{
         display: inline-flex;
         justify-content: center;
