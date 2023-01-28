@@ -72,28 +72,29 @@ div.player{
 
 /*  Start Game */
 .start-game-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6rem;
     grid-column-start: 1;
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 13;
     background-color: aqua;
     z-index: 8;
-    border-radius: 6rem;
-    position: relative;
 }
-.hidden{
-    visibility: hidden;
+.game-instructions{
+    height: 20rem;
 }
 section.target{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    left: 40rem;
-    top: 40rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 10rem;
 }
 .start-game{
-    position: absolute;
-    top: 6rem;
     width: 10rem;
     height: 2rem;
     border: none;
@@ -103,9 +104,12 @@ section.target{
 .target-score{
     height: 3rem;
     border-radius: 1rem;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.hidden{
+    visibility: hidden;
+}
 /* New Game */
 .new-game-section{
     display: inline-flex;
@@ -126,7 +130,6 @@ img#new-game{
     grid-column-end: 6;
     grid-row-start: 8;
     grid-row-end: 8;
-
 }
 img#dice{
     width: 20px;
