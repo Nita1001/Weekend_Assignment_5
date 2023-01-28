@@ -137,7 +137,7 @@ hold.addEventListener("click", () => {
         setTimeout(() => {
             roll.removeAttribute("disabled", "");
             hold.removeAttribute("disabled", "");
-        }, 2000);
+        }, 2900);
 
         resetGame();
     } else if (scoreP1 > targetScore || scoreP2 > targetScore) {
@@ -159,7 +159,7 @@ hold.addEventListener("click", () => {
         setTimeout(() => {
             roll.removeAttribute("disabled", "");
             hold.removeAttribute("disabled", "");
-        }, 2000);
+        }, 2900);
         resetGame();
     }
     p1CurrScore.innerText = 0;
