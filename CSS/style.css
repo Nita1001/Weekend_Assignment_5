@@ -63,7 +63,7 @@ div.player{
 .points{
     width: fit-content;
     height: fit-content;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 /* sections of Buttons & buttons */
@@ -116,8 +116,8 @@ section.target{
     grid-row-end: 3;
 }
 img#new-game{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
 }
 
 /* Dice */
@@ -128,8 +128,8 @@ img#new-game{
     grid-row-end: 8;
 }
 img#dice{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     margin-right: 0.4rem;
 }
 
@@ -137,20 +137,20 @@ img#dice{
 .hold-section{
     grid-column-start: 4;
     grid-column-end: 6;
-    grid-row-start: 10;
-    grid-row-end: 10;
+    grid-row-start: 9;
+    grid-row-end: 9;
 }
 img#hold{
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     margin-left: 2rem;
 }
 
 /* for buttons */
 .fit{
-    font-size: 2rem;
-    width: 16rem;
-    height: 4rem;
+    font-size: 1rem;
+    width: fit-content;
+    height: fit-content;
     background-color: rgba(245, 245, 245, 0.9);
     border-radius: 1rem;
     border: none;
@@ -175,8 +175,8 @@ img#hold{
     grid-row-end: 8;
 }
 section.roller-dice-1 div img, section.roller-dice-2 div img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 .double-message{
     position: absolute;
@@ -187,9 +187,208 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     /*  */
 }
 
-
-
 /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
 .background-opacity{
         /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
+}
+
+
+@media (min-width: 800px){
+    body{
+        /* background-image: linear-gradient(to right, #ea3c73 , #c7417b); */
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 8% 25% 10% 5% 5% 10% 25% 8%;
+        grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    }
+    .players-background{
+        min-width: 40vw;
+        min-height: 40vh;
+        z-index: -1;
+    }
+    .background-left{
+        background-color: #f5487f;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 12;
+    }
+    .background-right{
+        background-color: #c7417b;
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 12;
+    }
+    
+    .player-1{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .player-2{
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    div.player{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .player-header{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .current-score-1{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+    .current-score-2{
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+    
+    .points{
+        width: fit-content;
+        height: fit-content;
+        font-size: 28px;
+    }
+    
+    /* sections of Buttons & buttons */
+    
+    /*  Start Game */
+    .start-game-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6rem;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 13;
+        background-color: aqua;
+        z-index: 8;
+    }
+    .game-instructions{
+        height: 20rem;
+    }
+    section.target{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 10rem;
+    }
+    .start-game{
+        width: 10rem;
+        height: 2rem;
+        border: none;
+        border-radius: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .target-score{
+        height: 3rem;
+        border-radius: 1rem;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .hidden{
+        visibility: hidden;
+    }
+    /* New Game */
+    .new-game-section{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    img#new-game{
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Dice */
+    .dice-section{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+    img#dice{
+        width: 20px;
+        height: 20px;
+        margin-right: 0.4rem;
+    }
+    
+    /* Hold */
+    .hold-section{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+    img#hold{
+        width: 16px;
+        height: 16px;
+        margin-left: 2rem;
+    }
+    
+    /* for buttons */
+    .fit{
+        font-size: 2rem;
+        width: 16rem;
+        height: 4rem;
+        background-color: rgba(245, 245, 245, 0.9);
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .display-flex-center{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Roller Dice pictures */
+    .roller-dice-1{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    .roller-dice-2{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+    section.roller-dice-1 div img, section.roller-dice-2 div img{
+        width: 100px;
+        height: 100px;
+    }
+    .double-message{
+        position: absolute;
+        left: 55rem;
+        top: 20rem;
+    }
+    .funny-meme{
+        /*  */
+    }
+    
+    
+    
+    /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
+    .background-opacity{
+            /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
+    }
+    
+    
 }

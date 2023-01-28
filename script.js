@@ -76,7 +76,7 @@ roll.addEventListener('click', () => {
                 turns = 1;
             }
             funnyMeme.setAttribute('class', 'hidden')
-          }, 3000); // 1sec was too short so i added 2 more sec.
+          }, 4000); // 1sec was too short so i added 2 more sec.
     } else {
         let result = curr + curr2 + 2;
         // add result to current score each time

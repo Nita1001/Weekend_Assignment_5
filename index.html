@@ -1,96 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/normalize.css">
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <title>Roller Dice</title>
-</head>
-<body>
-
-    <div class="grid-container">
-        <!-- Backgrounds for Players section-->
-        <section class="players-background background-left"></section>
-        <section class="players-background background-right"></section>
-        <!-- Players -->
-        <section class="player-1">
-            <div class="player">
-                <h1 class="player-header">Player 1</h1>
-                <div id='points-1' class="points points-1">0</div>
-                <div class="player wins1">
-                    <h2>Total wins</h2>
-                    <div id="wins-p1" class="points">0</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/normalize.css" />
+        <link rel="stylesheet" href="./CSS/reset.css" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <title>Roller Dice</title>
+    </head>
+    <body>
+        <div class="grid-container">
+            <!-- Backgrounds for Players section-->
+            <section class="players-background background-left"></section>
+            <section class="players-background background-right"></section>
+            <!-- Players -->
+            <section class="player-1">
+                <div class="player">
+                    <h1 class="player-header">Player 1</h1>
+                    <div id="points-1" class="points points-1">0</div>
+                    <div class="player wins1">
+                        <h2>Total wins</h2>
+                        <div id="wins-p1" class="points">0</div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="player-2">
-            <div class="player">
-                <h1 class="player-header">Player 2</h1>
-                <div id='points-2' class="points points-2">0</div>
-                <div class="player wins2">
-                    <h2>Total wins</h2>
-                    <div id="wins-p2" class="points">0</div>
+            </section>
+            <section class="player-2">
+                <div class="player">
+                    <h1 class="player-header">Player 2</h1>
+                    <div id="points-2" class="points points-2">0</div>
+                    <div class="player wins2">
+                        <h2>Total wins</h2>
+                        <div id="wins-p2" class="points">0</div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- Current Score 1 -->
-        <section class="current-score-1">
-            <div class="player">
-                <h1 id="p1-curr-header" class="player-header">Current</h1>
-                <div id="curr-points-1" class="points curr-points-1">0</div>
-            </div>
-        </section>
-        <!-- Current Score 2 -->
-        <section class="current-score-2">
-            <div class="player">
-                <h1 id="p2-curr-header" class="player-header">Current</h1>
-                <div id="curr-points-2" class="points curr-points-2">0</div>
-            </div>
-        </section>
-        <!-- BUTTONS -->
-        <!-- Start Game -->
-        <section class="start-game-section">
-            <section class="game-instructions">
-                <h2>Game Instructions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae sunt neque mollitia. Cum repellat</p>
             </section>
-            <section class="target">
-                <h2>Please Select A Target Score</h2>
-                <input id='target-score-input' class="target-score" type="number" placeholder="Target Score">
-                <button id="start-game-btn" class="start-game">Start Game</button>
+            <!-- Current Score 1 -->
+            <section class="current-score-1">
+                <div class="player">
+                    <h1 id="p1-curr-header" class="player-header">Current</h1>
+                    <div id="curr-points-1" class="points curr-points-1">0</div>
+                </div>
             </section>
-        </section>
-        <!-- New Game -->
-        <section class="new-game-section">
-            <button id="new-game-btn" class="fit btn-new-game"><img id="new-game" src="./images/restart.png" alt="">New Game</button>
-        </section>
-        <!-- Dice -->
-        <section class="dice-section">
-            <button id="dice-btn" class="fit"><img id="dice" src="./images/dice.png" alt="">Roll Dice</button>
-        </section>
-        <!-- Hold -->
-        <section class="hold-section">
-               <button id="hold-btn" class="fit">Hold<img id="hold" src="./images/grab.png" alt=""></button>
-        </section>
-        <!-- Dice Images -->
-        <section class="roller-dice-1">
-            <div><img src="./images/dice-3.png" alt=""></div>
-        </section>
-        <section class="roller-dice-2">
-            <div><img src="./images/dice-3.png" alt=""></div>
-        </section>
-        <!-- audios -->
-        <audio id="background-music" src="./audio/Glory.mp3"></audio>
-        <audio id="rolling-dice-sound" src="./audio/shakeDice.wav"></audio>
-        <audio id="hold-sound" src="./audio/holdSound.wav"></audio>
-        <audio id="winning-Sound" src="./audio/winningSound.wav"></audio>
-        <!-- Double 6 message -->
-        <section id="meme" class="hidden"><img class="funny-meme" src="./images/Double6ProbMemeBird.png" alt=""></section>
-    </div>    
-
-</body>
-<script src="./script.js"></script>
+            <!-- Current Score 2 -->
+            <section class="current-score-2">
+                <div class="player">
+                    <h1 id="p2-curr-header" class="player-header">Current</h1>
+                    <div id="curr-points-2" class="points curr-points-2">0</div>
+                </div>
+            </section>
+            <!-- BUTTONS -->
+            <!-- Start Game -->
+            <section class="start-game-section">
+                <section class="game-instructions">
+                    <h2>Game Instructions</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Molestiae sunt neque mollitia. Cum repellat
+                    </p>
+                </section>
+                <section class="target">
+                    <h2>Please Select A Target Score</h2>
+                    <input
+                        id="target-score-input"
+                        class="target-score"
+                        type="number"
+                        placeholder="Target Score"
+                    />
+                    <button id="start-game-btn" class="start-game">
+                        Start Game
+                    </button>
+                </section>
+            </section>
+            <!-- New Game -->
+            <section class="new-game-section display-flex-center">
+                <button id="new-game-btn" class="fit btn-new-game">
+                    <img id="new-game" src="./images/restart.png" alt="" />New
+                    Game
+                </button>
+            </section>
+            <!-- Dice -->
+            <section class="dice-section display-flex-center">
+                <button id="dice-btn" class="fit">
+                    <img id="dice" src="./images/dice.png" alt="" />Roll Dice
+                </button>
+            </section>
+            <!-- Hold -->
+            <section class="hold-section display-flex-center">
+                <button id="hold-btn" class="fit">
+                    Hold
+                    <img id="hold" src="./images/grab.png" alt="" />
+                </button>
+            </section>
+            <!-- Dice Images -->
+            <section class="roller-dice-1 display-flex-center">
+                <div>
+                    <img src="./images/dice-3.png" alt="" />
+                </div>
+            </section>
+            <section class="roller-dice-2 display-flex-center">
+                <div>
+                    <img src="./images/dice-3.png" alt="" />
+                </div>
+            </section>
+            <!-- audios -->
+            <audio id="background-music" src="./audio/Glory.mp3"></audio>
+            <audio id="rolling-dice-sound" src="./audio/shakeDice.wav"></audio>
+            <audio id="hold-sound" src="./audio/holdSound.wav"></audio>
+            <audio id="winning-Sound" src="./audio/winningSound.wav"></audio>
+            <!-- Double 6 message -->
+            <section id="meme" class="hidden">
+                <img
+                    class="funny-meme"
+                    src="./images/Double6ProbMemeBird.png"
+                    alt=""
+                />
+            </section>
+        </div>
+    </body>
+    <script src="./script.js"></script>
 </html>
