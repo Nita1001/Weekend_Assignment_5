@@ -67,15 +67,47 @@ div.player{
     height: fit-content;
     font-size: 28px;
 }
-.points-1{
 
+/* sections of Buttons & buttons */
+
+/*  Start Game */
+.start-game-section{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    background-color: aqua;
+    z-index: 8;
+    border-radius: 6rem;
+    position: relative;
 }
-.points-2{
-
+.hidden{
+    visibility: hidden;
+}
+section.target{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 40rem;
+    top: 40rem;
+}
+.start-game{
+    position: absolute;
+    top: 6rem;
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.target-score{
+    height: 3rem;
+    border-radius: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Buttons */
-.new-game{
+/* New Game */
+.new-game-section{
     display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
@@ -86,6 +118,8 @@ img#new-game{
     width: 20px;
     height: 20px;
 }
+
+/* Dice */
 .dice-section{
     display: inline-flex;
     grid-column-start: 4;
@@ -100,6 +134,7 @@ img#dice{
     margin-right: 0.4rem;
 }
 
+/* Hold */
 .hold-section{
     display: inline-flex;
     grid-column-start: 4;
@@ -113,6 +148,8 @@ img#hold{
     height: 16px;
     margin-left: 2rem;
 }
+
+/* for buttons */
 .fit{
     font-size: 2rem;
     width: fit-content;
@@ -121,7 +158,7 @@ img#hold{
     border-radius: 1rem;
     border: none;
 }
-
+/* Roller Dice pictures */
 .roller-dice-1{
     display: inline-flex;
     grid-column-start: 4;
@@ -136,12 +173,6 @@ img#hold{
     grid-row-start: 6;
     grid-row-end: 8;
 }
-
-
-section.roller-dice-1 div, section.roller-dice-2 div{
-    
-}
-
 section.roller-dice-1 div img, section.roller-dice-2 div img{
     width: 100px;
     height: 100px;

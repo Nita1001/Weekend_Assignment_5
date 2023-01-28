@@ -4,19 +4,27 @@ const player1Score = document.querySelector('#points-1');
 const player2Score = document.querySelector('#points-2');
 const p1CurrScore = document.querySelector('#curr-points-1');
 const p2CurrScore = document.querySelector('#curr-points-2');
+const p1CurrHeader = document.querySelector('#p1-curr-header');
+const p2CurrHeader = document.querySelector('#p2-curr-header');
 const roll = document.querySelector('#dice-btn');
 const hold = document.querySelector('#hold-btn');
 const newGame = document.querySelector('#new-game-btn');
+const startGameSection = document.querySelector('.start-game-section')
+const startGame = document.querySelector('#start-game-btn')
+const targetScoreInput = document.querySelector('#target-score-input')
 const myDice = ['./images/dice-1.png', './images/dice-2.png','./images/dice-3.png', './images/dice-4.png', './images/dice-5.png', './images/dice-6.png',]
 const firstDice = document.querySelector('.roller-dice-1 div img');
 const secondDice = document.querySelector('.roller-dice-2 div img');
-const p1CurrHeader = document.querySelector('#p1-curr-header');
-const p2CurrHeader = document.querySelector('#p2-curr-header');
 let currentSum = 0; // sum is for current Player round points
 // score throughout the rounds -Hold- global score
 let scoreP1 = 0; 
 let scoreP2 = 0;
 let turns = 1; // first Players / second players turn
+let targetScore = 0;
+startGame.addEventListener('click', () =>{
+    targetScore = targetScoreInput.value;
+    startGameSection.setAttribute('class', 'hidden');
+});
 
 roll.addEventListener('click', () => {
     let curr = Math.floor(Math.random()* 5) + 1;
@@ -55,11 +63,11 @@ hold.addEventListener('click', () => {
         player2Score.innerText = scoreP2;
         turns = 1;
     }
-    if(scoreP1 === 100 || scoreP2 === 100){
-        (scoreP1 === 100) ? p1CurrHeader.innerText = 'You Win!': p2CurrHeader.innerText ='You Win!';
-    }else if(scoreP1 > 100 || scoreP2 > 100)
+    if(scoreP1 === targetScore || scoreP2 === targetScore){
+        (scoreP1 === targetScore) ? p1CurrHeader.innerText = 'You Win!': p2CurrHeader.innerText ='You Win!';
+    }else if(scoreP1 > targetScore || scoreP2 > targetScore)
     {
-        if(scoreP1 > 100){
+        if(scoreP1 > targetScore){
             p1CurrHeader.innerText = 'Passed the target score';
             p2CurrHeader.innerText ='You Win!';
 
@@ -78,8 +86,13 @@ newGame.addEventListener('click', () =>{
     player2Score.innerText = 0;
     p1CurrScore.innerText = 0;
     p2CurrScore.innerText = 0;
+    scoreP1 = 0;
+    scoreP2 = 0;
+    currentSum = 0;
+    targetScore = 0;
+    targetScoreInput.value = '';
     p1CurrHeader.innerText = 'Current';
     p2CurrHeader.innerText = 'Current';
-
+    startGameSection.setAttribute('class', 'start-game-section');
 });
 
