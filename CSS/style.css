@@ -184,7 +184,8 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     top: 20rem;
 }
 .funny-meme{
-    /*  */
+    width: 200px;
+    height: 200px;
 }
 
 /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
