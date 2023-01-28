@@ -86,7 +86,7 @@ img#new-game{
     width: 20px;
     height: 20px;
 }
-.dice{
+.dice-section{
     display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
@@ -100,7 +100,7 @@ img#dice{
     margin-right: 0.4rem;
 }
 
-.hold{
+.hold-section{
     display: inline-flex;
     grid-column-start: 4;
     grid-column-end: 6;
