@@ -116,6 +116,8 @@ hold.addEventListener('click', () => {
     }
     if(scoreP1 === targetScore || scoreP2 === targetScore){
         winningSound.play();
+        roll.setAttribute('disabled', '');
+        hold.setAttribute('disabled', '');
         if (scoreP1 === targetScore){
             p1CurrHeader.innerText = 'You Won!';
             winsP1++;
@@ -125,9 +127,15 @@ hold.addEventListener('click', () => {
             winsP2++;
             p2TotalWins.innerText = winsP2;
         }
+        setTimeout(()=>{
+            roll.removeAttribute('disabled', '');
+            hold.removeAttribute('disabled', '');
+        }, 2000);
+
         resetGame();
     } else if(scoreP1 > targetScore || scoreP2 > targetScore)
-    {
+    {   roll.setAttribute('disabled', '');
+        hold.setAttribute('disabled', '');
         if(scoreP1 > targetScore){
             winningSound.play();
             p1CurrHeader.innerText = 'Passed the target score';
@@ -141,6 +149,10 @@ hold.addEventListener('click', () => {
             winsP1++;
             p1TotalWins.innerText = winsP1;
         }
+        setTimeout(()=>{
+            roll.removeAttribute('disabled', '');
+            hold.removeAttribute('disabled', '');
+        }, 2000);
         resetGame();
     } 
     p1CurrScore.innerText = 0;
