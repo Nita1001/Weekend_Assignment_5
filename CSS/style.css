@@ -1,5 +1,6 @@
 body{
-    /* background-image: linear-gradient(to right, #ea3c73 , #c7417b); */
+    background-image: url(/images/background101.jpg);
+    background-repeat: no-repeat;
 }
 .grid-container{
     display: grid;
@@ -68,18 +69,19 @@ div.player{
 
 /*  Start Game */
 .start-game-section{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 6rem;
-    grid-column-start: 1;
-    grid-column-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 14;
-    background-color: aqua;
+    border-radius: 1rem;
+    background-color: #748bd8;
     z-index: 8;
 }
+
 .game-instructions{
     height: 20rem;
 }
@@ -143,7 +145,6 @@ img#hold{
     height: 10px;
     margin-left: 2rem;
 }
-
 /* for buttons */
 .fit{
     font-size: 1rem;
@@ -153,7 +154,6 @@ img#hold{
     border-radius: 1rem;
     border: none;
 }
-
 .display-flex-center{
     display: inline-flex;
     justify-content: center;
@@ -178,25 +178,27 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
 }
 .double-message{
     position: absolute;
-    left: 3rem;
-    top: 4rem;
+    left: 30%;
+    top: 2%;
 }
 .funny-meme{
-    width: 100%;
-    height: 100%;
+    width: 50%;
 }
+
 
 /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
 .background-opacity{
-        /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)); */
+        background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5));
 }
 
 
 @media (min-width: 800px){
+
     .grid-container{
         display: grid;
-        grid-template-columns: 8% 25% 5% 5% 5% 5% 25% 8%;
-        grid-template-rows: 5% 5% 5% 5% 5% 5% 3% 5% 5% 5% 2% 5% 2%;
+        margin: auto;
+        grid-template-columns: 14% 25% 5% 5% 5% 5% 25% 8%;
+        grid-template-rows: 15% 5% 5% 5% 5% 5% 3% 5% 5% 5% 2% 5% 2%;
     }
     .background-left{
         background-color: #f5487f;
@@ -254,6 +256,7 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     
     /*  Start Game */
     .start-game-section{
+        margin: 0 auto;
         border-radius: 6rem;
         width: 80vw;
         height: 80vh;
@@ -359,14 +362,12 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     }
     .double-message{
         position: absolute;
-        left: 55rem;
-        top: 20rem;
+        left: 32%;
+        top: 6%;
     }
     .funny-meme{
-        /*  */
+        width: 56%;
     }
-    
-    
     
     /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
     .background-opacity{
