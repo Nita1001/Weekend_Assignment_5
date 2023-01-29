@@ -83,8 +83,12 @@ div.player{
 }
 
 .game-instructions{
+    margin-left: 1rem;
+    width: fit-content;
+    height: fit-content;
     height: 20rem;
 }
+
 section.target{
     display: flex;
     flex-direction: column;
@@ -196,7 +200,6 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
 .background-opacity{
     opacity: 0.3;
 }
-
 
 @media (min-width: 800px){
 
@@ -374,7 +377,4 @@ section.roller-dice-1 div img, section.roller-dice-2 div img{
     .funny-meme{
         width: 56%;
     }
-    
-    /* ON CURRENT PLAYERS TURN, CHANGE SECTION OPACITY OF OTHER PLAYER */
-
 }
